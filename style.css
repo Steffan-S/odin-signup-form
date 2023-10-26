@@ -20,11 +20,17 @@ body {
     width: 38vw;
     height: 100vh;
     background: url(images/left-bg.jpg) no-repeat center;
-    background-size:cover;
+    background-size: cover;
     display: flex;
     justify-content: center;
 }
 
+.logo {
+    background: url(images/logo.svg) no-repeat top;
+    background-size: 40%;
+    width: 100%;
+    margin-top: 90px;
+}
 
 /* Right container ------------------- */
 .container-main {
@@ -41,6 +47,10 @@ header h1 {
     font-size: 1.2rem;
 }
 
+header h2 {
+    opacity: 0.7;
+}
+
 header h2,
 header h1 {
     margin-bottom: 20px;
@@ -48,7 +58,6 @@ header h1 {
 
 /* Right container, form */
 form {
-    /* border: 1px solid #000; */
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -58,11 +67,13 @@ form {
 .sign-up-container {
     background: #fff;
     padding: 24px;
+    box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.08);
+    -webkit-box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.08);
+    -moz-box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.08);
 }
 
 form legend {
     width: 100%;
-    /* border: 1px solid #000; */
     font-weight: bold;
 }
 
@@ -73,14 +84,21 @@ label {
     letter-spacing: 1.05px;
 }
 
-label span {
+label span.required {
     color: red;
+}
+
+label span.labelinfo {
+    font-size: 0.55rem;
+    opacity: 0.5;
+    letter-spacing: 0;
+    margin-left: 8px;
+    /* display: block; */
 }
 
 .input-container {
     flex: 1;
     flex-basis: 40%;
-    /* border: 1px solid #000; */
     display: flex;
     flex-flow: column;
     gap: 4px;
@@ -91,7 +109,23 @@ input {
     border: 1px solid #ccd0d2;
     border-radius: 4px;
     padding: 0 8px;
+    font-size: 14px;
 }
+
+input:focus,
+input:hover {
+    outline: none;
+    border: 1px solid #13425a;
+    box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.08);
+    -webkit-box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.08);
+    -moz-box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.08);
+}
+
+input:not(:placeholder-shown):invalid {
+    outline: none;
+    border: 2px solid #ff5353;
+}
+
 
 /* Right container, Footer */
 button {
@@ -111,8 +145,9 @@ button:hover {
     background: #20c75a;
 }
 
+
 .main-footer {
-    margin: 24px 24px 0 24px;
+    margin-top: 16px;
 }
 
 .main-footer p,
@@ -122,4 +157,11 @@ button:hover {
 
 a {
     text-decoration: none;
+    font-weight: bold;
+    color: #13425a;
+    transition: all 0.2s ease;
+}
+
+a:hover {
+    color: #266a8d;
 }

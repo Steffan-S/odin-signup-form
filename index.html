@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Odin Project: Sign up Form</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="container-left">
-        
+        <div class="logo"></div>
     </div>
 
     <div class="container-main">
@@ -16,44 +18,50 @@
             <h1>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up <em>now</em> to get started.</h1>
             <h2>You <em>know</em> you want to.</h2>
         </header>
-    
+
         <div class="sign-up-container">
-            <form action="#" method="post">
+            <form action="#" method="post" id="sign-up-form">
                 <legend>Let's do this!</legend>
 
                 <div class="input-container">
-                    <label for="">First Name<span class="required">*</span></label>
-                    <input type="text" id="" name="" placeholder="Bob ..."/>
+                    <label for="first-name">First Name<span class="required">*</span></label>
+                    <input type="text" id="first-name" name="first-name" placeholder="Bob ..." required />
                 </div>
-                
+
                 <div class="input-container">
-                    <label for="">Last Name<span class="required">*</span></label>
-                    <input type="text" id="" name="" placeholder="Ross ..."/>
-                </div>
-                <div class="input-container">
-                    <label for="">Email<span class="required">*</span></label>
-                    <input type="email" id="" name="" placeholder="your@email.com"/>
+                    <label for="last-name">Last Name<span class="required">*</span></label>
+                    <input type="text" id="last-name" name="last-name" placeholder="Ross ..." required />
                 </div>
                 <div class="input-container">
-                    <label for="">Phone number<span class="required">*</span></label>
-                    <input type="number" id="" name="" placeholder="0612345678"/>
+                    <label for="email">Email<span class="required">*</span></label>
+                    <input type="email" id="email" name="email" placeholder="your@email.com" required />
                 </div>
                 <div class="input-container">
-                    <label for="">Password<span class="required">*</span></label>
-                    <input type="password" id="" name="" />
+                    <label for="phone-number">Phone number<span class="required">*</span><span class="labelinfo">(min 8 digits)</span></label>
+                    <input type="number" id="phone-number" name="phone-number" min="11111111" placeholder="0612345678"
+                        required />
                 </div>
                 <div class="input-container">
-                    <label for="">Confirm password<span class="required">*</span></label>
-                    <input type="password" id="" name="" />
+                    <label for="password">Password<span class="required">*</span><span class="labelinfo">(min length 5 characters)</span></label>
+                    <input type="password" id="password" name="password" minlength="5" maxlength="20" placeholder=" "
+                        required />
+                </div>
+                <div class="input-container">
+                    <label for="password-check">Confirm password<span class="required">*</span><span class="labelinfo">(min length 5 characters)</span></label>
+                    <input type="password" id="password-check" name="password-check" minlength="5" maxlength="20"
+                        placeholder=" " required />
+                </div>
+
+                <div class="main-footer">
+                    <button type="submit" form="sign-up-form">Create Account</button>
+                    <p>Already have an account? <a href="#">Log in</a></p>
                 </div>
             </form>
 
         </div>
 
-        <div class="main-footer">
-            <button type="submit">Create Account</button>
-            <p>Already have an account? <a href="#">Log in</a></p>
-        </div>
+        
     </div>
 </body>
+
 </html>
